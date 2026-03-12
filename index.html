@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- To support all the possible characters (any language etc)-->
+        <meta charset="UTF-8"> 
+
+        <!-- Tells mobile browsers to use the device's actual width and not zoom out-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Match Up</title>
+
+        <link href="./style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!--Start screen-->
+        <!--Card container-->
+        <div class="card-container" id="start-screen">
+            <h1>Match up</h1>
+            <h2>Are you two compatible?</h2>
+            <!--Names container-->
+            <div class="names-container">
+                <input placeholder="Player 1" id="player-1"> 
+                <span>&</span>
+                <input placeholder="Player 2" id="player-2"> 
+            </div>
+
+            <span class="error hidden" id="error-text">Please enter both names</span>
+
+            <button class="action-btn" id="start-game-btn">Start Game</button>
+        </div>
+        
+        <!--Question screen-->
+        <!--Card container-->
+        <div class="card-container hidden" id="question-screen">
+            <span class="turn-tag" id="turn-tag">Inga's turn</span>
+            <h3 id="question-number">Question 1 of 10</h3>
+            <!--Question container-->
+            <div class="question-container">
+                <span class="dark-text" id="question-text">Which would you rather have?</span>
+
+                <input type="radio">
+                <label class="option-btn" id="option1" for="option1">A cozy night in</label>
+
+                <input type="radio">
+                <label class="option-btn" id="option2" for="option2">A night out dancing</label>
+            </div>
+        </div>
+
+        <!--Pass screen-->
+        <!--Card container-->
+        <div class="card-container hidden" id="pass-screen">
+            <span class="emoji">🙈</span>
+
+            <!--Pass container-->
+            <div class="question-container">
+                <span class="dark-text" id="pass-to-text">Pass to Gennady</span>
+                <h2>No peeking!</h2>
+
+                <button class="action-btn" id="ready-btn">I'm Ready</button>
+            </div>
+        </div>
+
+        <!--It's a match screen-->
+        <!--Card container-->
+        <div class="card-container hidden" id="match-screen">
+            <span class="emoji">💕</span>
+
+            <!--Match container-->
+            <div class="question-container">
+                <span class="pink-text">It's a match!</span>
+                <h2>You both picked:</h2>
+                <span class="pink-text" id="match-screen-text">Something</span>
+
+                <button class="action-btn" id="match-next-question-btn">Next Question</button>
+            </div>
+        </div>
+
+        <!--No match screen-->
+        <!--Card container-->
+        <div class="card-container hidden" id="no-match-screen">
+            <span class="emoji">🙈</span>
+
+            <!--Match container-->
+            <div class="question-container">
+                <span class="dark-text">Different vibe!</span>
+
+                <div class="answers-container">
+                    <span class="pink-text" id="player-1-no-match">Inga</span>
+                    <p id="player-1-answer">A night out dancing</p>
+                </div>
+
+                <div class="answers-container">
+                    <span class="pink-text" id="player-2-no-match">Gennady</span>
+                    <p id="player-2-answer">A cozy night in</p>
+                </div>
+
+                <button class="action-btn" id="no-match-next-question-btn">Next question</button>
+            </div>
+        </div>
+
+        <!--Final screen-->
+        <!--Card container-->
+        <div class="card-container hidden" id="results-screen">
+            <span class="emoji" id="result-emoji">💕</span>
+            <div class="results-container" id="results-container"> 
+                <span class="result-percent" id="result-percent">90%</span>
+                <span class="result-text" id="result-text">Soulmates!</span>
+            </div>
+            <h2 id="result-desrciption">You matched on 9 out of 10 questions</h2>
+
+            <button class="action-btn" id="play-again-btn">Play again</button>
+        </div>  
+
+    </body>
+    <script src="script.js"></script>
+
+</html>

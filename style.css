@@ -1,0 +1,218 @@
+/* Always do this to remove the default spacing (as many of elements have them)*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* this allows including border and padding to the element's dimensions
+    (otherwise the dimensions will be only for the content*/
+    font-family: Quicksand;
+}
+
+body {
+  min-height: 100vh;        /* to make the page always take the full screen size */
+  background: linear-gradient(135deg, #fff0f3 0%, #ffd6e0 50%, #ffb3c6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #ff6b8a;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #999;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #bbb;
+}
+
+span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff6b8a;
+}
+
+.error {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff6b8a;
+}
+
+.card-container {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(255, 143, 171, 0.4);
+    width: 100%;
+    max-width: 420px;
+    padding: 50px 35px;
+    margin: 5px;
+    cursor: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.names-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+input {
+    border-color: #ffe0e6;
+    border-radius: 15px;
+    width: 110px;
+    border-style: solid;
+    padding: 14px 12px;
+    margin: 5px;
+    color: #999;
+    font-size: 16px;
+    background-color: #fffbfc;
+    text-align: center;
+}
+
+input:focus {
+    border-color: #ff6b8a;
+    outline: none;
+}
+.action-btn {
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    background-color: #ff6b8a;
+    color: white;
+    border-style: none;
+    padding: 16px 40px;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 143, 171, 0.4);
+}
+
+.turn-tag {
+    background-color: #ff6b8a;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.dark-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.option-btn {
+    border-color: #ffe0e6;
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    padding: 18px 20px;
+    color: #e85a78;
+    background-color: #fff5f7; 
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    border-color: #ff6b8a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 143, 171, 0.4);
+}
+
+.emoji {
+    font-size: 100px;
+    margin-bottom: -30px;
+}
+
+.pink-text {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #ff6b8a;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 18px 20px;
+    background-color: #fff5f7; 
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+}
+
+.answers-container .pink-text {
+    font-size: 16px;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.result-percent {
+    font-size: 72px;
+    font-weight: bold;
+
+}
+
+.result-text {
+    font-size:26px;
+    font-weight: bold;
+}
+
+.low .result-percent,
+.low .result-text {
+    color: #a0a0a0;
+}
+
+.medium .result-percent,
+.medium .result-text {
+    color: #ffb347;
+}
+
+.high .result-percent,
+.high .result-text {
+    color: #ff6b8a;
+}
+
+.hidden {
+    display: none;
+}
